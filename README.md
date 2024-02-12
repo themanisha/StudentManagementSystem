@@ -26,10 +26,3 @@ This Java application utilizes Swing to create a simple Student Management Syste
 - Input student information in the form.
 - Click "Add Student" to add the student to the table.
 
-## Contributing
-
-Contributions are welcome! Fork the repository and create a pull request with your improvements.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
