@@ -12,20 +12,20 @@ public class StudentManagementSystem extends JFrame {
     public StudentManagementSystem() {
         super("Student Management System");
 
-        // Initialize table model
+        // Initializes table model
         tableModel = new DefaultTableModel(new Object[]{"ID", "Name", "Grade"}, 0);
         table = new JTable(tableModel);
 
-        // Create UI components
+        // Creates UI components
         JScrollPane scrollPane = new JScrollPane(table);
         JPanel formPanel = createForm();
 
-        // Set layout
+        // Sets layout
         setLayout(new BorderLayout());
         add(scrollPane, BorderLayout.CENTER);
         add(formPanel, BorderLayout.SOUTH);
 
-        // Set frame properties
+        // Sets frame properties
         setSize(600, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
@@ -33,7 +33,7 @@ public class StudentManagementSystem extends JFrame {
     }
 
     private JPanel createForm() {
-        // Create form components
+        // Creates form components
         JTextField idField = new JTextField();
         idField.setPreferredSize(new Dimension(80, 25));
 
@@ -51,7 +51,7 @@ public class StudentManagementSystem extends JFrame {
             }
         });
 
-        // Create form panel
+        // Creates form panel
         JPanel formPanel = new JPanel();
         formPanel.setLayout(new FlowLayout());
         formPanel.add(new JLabel("ID:"));
@@ -66,16 +66,16 @@ public class StudentManagementSystem extends JFrame {
     }
 
     private void addStudent(String id, String name, String grade) {
-        // Validate input
+        // Validates input
         if (id.isEmpty() || name.isEmpty() || grade.isEmpty()) {
             showAlert("Please fill in all fields.");
             return;
         }
 
-        // Add a new student to the table
+        // Adds a new student to the table
         tableModel.addRow(new Object[]{id, name, grade});
 
-        // Clear input fields
+        // Clears input fields
         clearFields();
     }
 
